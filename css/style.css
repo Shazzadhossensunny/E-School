@@ -77,6 +77,16 @@ padding: 15px;
 .paddy {
     padding: 70px 0 50px;
 }
+
+.menu-toggle {
+    color: #000;
+    line-height: 50px;
+    font-size: 24px;
+    position: absolute;
+    right: 6%;
+    top: 6px;
+    display: none;
+}
 /************************************************************
          Global css
 *****************************************************************/
@@ -322,18 +332,11 @@ footer ul li a:hover{
 }
 
 
-
-
-
-
-
-
-
 @media (max-width: 1299px){ 
-	.container{
-		width: 900px;
-	}
-	nav ul li a {
+  .container{
+    width: 900px;
+  }
+  nav ul li a {
     font-size: 18px;
     padding: 8px 20px;   
 }
@@ -342,8 +345,8 @@ footer ul li a:hover{
    
 }
 .banner-content h1{
-	 font-size: 36px;
-	 line-height: 1.2;
+   font-size: 36px;
+   line-height: 1.2;
     margin: 10px 0 15px;
   
 }
@@ -439,12 +442,18 @@ footer ul li a {
     bottom: 10px;
     font-size: 30px;
 }
+
+/******************************************************
+      media query css code start
+****************************************************/
+
+
 }
 @media (max-width: 1000px){ 
-	.container{
-		width: 700px;
-	}
-	.banner-content span {
+  .container{
+    width: 700px;
+  }
+  .banner-content span {
     font-size: 15px;
     letter-spacing: 1px;
 }
@@ -526,13 +535,40 @@ nav ul li a {
 }
 
 @media (max-width: 800px){ 
-	.container{
-		width: 600px;
-	}
+  .container{
+    width: 600px;
+  }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    nav {
+    background: #333;
+    width: 100%;
+    position: absolute;
+    height: calc(50vh - 70px);
+    left: -100%;
+    top: 70px;
+}
+
+nav.active{
+    left: 0;
+}
+
+nav ul {
+    justify-content: flex-end;
+    display: block !important;
+    text-align: center;
+    margin-top: 30px;
+}
+
 
     nav ul li a {
-       font-size: 13px;
-       padding: 5px 15px;
+    font-size: 20px;
+   padding: 15px 0;
+    color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.2);
 }
 .banner-content span {
     font-size: 13px;
@@ -644,10 +680,10 @@ footer ul li a {
 
 
 @media (max-width: 700px){ 
-	.container{
-		width: 100%;
-		padding: 0 20px;
-	}
+  .container{
+    width: 100%;
+    padding: 0 20px;
+  }
 
 .logo {
     width: 50%;
@@ -657,6 +693,7 @@ footer ul li a {
 
 nav {
     width: 100%;
+    
 }
 
 nav ul li a {
@@ -717,6 +754,13 @@ nav ul li a {
 
 
 }
+
+
+
+
+
+
+
 
 
 
