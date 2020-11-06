@@ -69,11 +69,16 @@ padding: 15px;
    background: #21B573;
    border: 1px solid #21B573;
    transition-duration: 0.3s;
+  
 }
 .btn:hover{
   background: transparent;
   color: #000;
 }
+
+
+
+
 .paddy {
     padding: 70px 0 50px;
 }
@@ -110,23 +115,46 @@ nav ul{
    justify-content: flex-end;
 }
 
-nav ul li{
-   margin-left: 10px;
+
+nav ul li a {
+    font-size: 20px;
+    color: #303430;
+    padding: 16px 0px 5px;
+    display: block;
+    font-weight: 700;
+    transition-duration: 0.3s;
+    position: relative;
+    margin: 0 25px;
+}
+ 
+
+nav ul li a:hover{
+    color: tomato;
 }
 
-nav ul li a{
-  font-size: 20px;
-  color: #303430;
-  padding: 10px 25px;
-  display: block;
-  border-radius: 30px;
-  font-weight: 600; 
-  transition-duration: 0.3s;
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%) scaleX(0);
+    -moz-transform: translateX(-50%) scaleX(0);
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: 50% 50%;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(8 117 247);
+    transition: transform 0.3s;
 }
-nav ul li a:hover{
-  background: #21B573;
-  color: #fff;
+
+nav ul li a:hover::after{
+    -webkit-transform: translateX(-50%) scaleX(1);
+    -moz-transform: translateX(-50%) scaleX(1);
+    transform: translateX(-50%) scaleX(1);
+
 }
+
+
 .banner-content{
     width: 40%;
 }
@@ -138,7 +166,7 @@ nav ul li a:hover{
 }
 .banner-content h1{
     font-size: 57px;
-    line-height: 1.5;
+    line-height: 1.2;
     color: #000;
     margin: 15px 0 30px;
 }
@@ -211,9 +239,17 @@ nav ul li a:hover{
     padding: 30px 15px;
     border-radius: 15px;
 }
+.inner-course img{
+       width: 100%;
+      overflow: hidden;
+}
+.inner-course:hover img{
+     transform: scale(1.1);
+     transition: transform 0.3s; 
+}
 
 .inner-course h2{
-    font-size: 35px;
+    font-size: 30px;
     color: #413960;
     font-weight: 600;
     margin: 10px 0 5px;
@@ -230,7 +266,7 @@ nav ul li a:hover{
 .inner-course ul li{
 	margin-top: 15px;
 	font-size: 16px;
-	ont-weight: 600;
+	font-weight: 600;
 	color: #585859;
 }
 .inner-course ul li i{
@@ -544,12 +580,15 @@ nav ul li a {
     }
 
     nav {
+    justify-content: center;
+    display: flex;
     background: #333;
     width: 100%;
     position: absolute;
-    height: calc(50vh - 70px);
+    height: calc(70vh - 70px);
     left: -100%;
     top: 70px;
+    align-items: center;
 }
 
 nav.active{
@@ -560,12 +599,12 @@ nav ul {
     justify-content: flex-end;
     display: block !important;
     text-align: center;
-    margin-top: 30px;
+   
 }
 
 
     nav ul li a {
-    font-size: 20px;
+    font-size: 35px;
    padding: 15px 0;
     color: #fff;
     border-bottom: 1px solid rgba(0,0,0,.2);
@@ -697,8 +736,8 @@ nav {
 }
 
 nav ul li a {
-    font-size: 19px;
-    padding: 5px 15px;
+    font-size: 16px;
+    
 }
 
 .banner-content {
